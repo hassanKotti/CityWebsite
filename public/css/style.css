@@ -47,7 +47,7 @@ button:not(:disabled) {
     margin: 0.375rem 0;
 }
 .jum-container {
-    /*height: 500px;*/
+    height: 500px;
     background-image: url("../assets/banner_dubai_burj_khalifa.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -92,6 +92,21 @@ button:not(:disabled) {
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0) 100%
     );
+}
+.side-menu {
+    z-index: 10002;
+    display: flex;
+    display: -ms-flexbox;
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    padding: 0 0 1rem;
+    overflow-y: auto;
+    background-color: #121212;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: 250ms ease;
 }
 #wrapper {
     overflow-x: hidden;
@@ -170,4 +185,8 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 .card-trans {
     background-color: rgba(0, 31, 53, 0.7);
+}
+.city_map {
+    width: 400px;
+    height: 250px;
 }
