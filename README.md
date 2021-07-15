@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/hassanKotti/CityWebsite/blob/main/public/assets/logo.png?raw=true" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/hassanKotti/CityWebsite/blob/main/public/assets/logo.png?raw=true" width="200"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -11,50 +11,44 @@
 
 This project addressed how to build more extensive and effective city dashboards. It tackled three sets of fundamental problems: data issues; visualisation/interaction issues; and analytics/modelling issues. It used the solutions to undertake applied research that significantly extend the Dublin Dashboard through the development and testing of a new suite of querying, modelling and prediction/simulation modules and novel forms of multimedia interaction, including virtual reality, the projection of data onto architectural models, and converting data into audio-textual forms. This testbed provided a template to develop, implement and test a Cork Dashboard and influence dashboard development globally.
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+For system requirements you [Check Laravel Requirement](https://laravel.com/docs/8.x/deployment#server-requirements)
 
-## Learning Laravel
+### Clone the repository from github.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    git clone https://github.com/hassank/CityWebsite.git [YourDirectoryName]
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The command installs the project in a directory named `YourDirectoryName`. You can choose a different
+directory name if you want.
 
-## Laravel Sponsors
+### Install dependencies
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Laravel utilizes [Composer](https://getcomposer.org/) to manage its dependencies. So, before using Laravel, make sure you have Composer installed on your machine.
 
-### Premium Partners
+    cd YourDirectoryName
+    composer install
 
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[Many](https://www.many.co.uk)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   **[OP.GG](https://op.gg)**
+### Config file
 
-## Contributing
+Rename or copy `.env.example` file to `.env` 1.`php artisan key:generate` to generate app key.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Set your database credentials in your `.env` file
+1. Set your `APP_URL` in your `.env` file.
 
-## Code of Conduct
+### Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Migrate database table `php artisan migrate`
+1. Generate config `php artisan db:seed`
 
-## Security Vulnerabilities
+### Install Node Dependencies(optional)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. `npm install` to install node dependencies
+1. `npm run dev` to build our javascript
+### Install Node Dependencies(optional)
+
+1. `php artisan serve` to install node dependencies
+1. open browser http://localhost:8000/home to see output
 
 ## License
 
