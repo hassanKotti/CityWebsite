@@ -12,6 +12,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/mapdata.js') }}" defer></script>
+    <script src="{{ asset('js/countrymap.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -26,7 +28,6 @@
     <div id="app">
         @include('layouts.shared.navbar')
         <div class="d-flex" id="wrapper">
-
             <!-- Sidebar-->
             @include('layouts.shared.sidemenu')
             <!-- Page content wrapper-->
@@ -35,6 +36,7 @@
                 <main>
                     @yield('content')
                 </main>
+                @include('layouts.shared.footer')
             </div>
             <script src="//unpkg.com/alpinejs" defer></script>
         </div>

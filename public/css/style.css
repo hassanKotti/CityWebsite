@@ -13,6 +13,28 @@ button:not(:disabled) {
         left: 0;
     }
 }
+
+.side-menu__toggler {
+    z-index: 10003;
+    position: fixed;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 250ms ease;
+    /* cursor: pointer; */
+}
+
+.side-menu__right {
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .side-menu__toggler {
     z-index: 10003;
     position: fixed;
@@ -48,7 +70,7 @@ button:not(:disabled) {
 }
 .jum-container {
     height: 500px;
-    background-image: url("../assets/banner_dubai_burj_khalifa.jpg");
+    background-image: url("../assets/banner_dubai_burj_khalifa.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -102,12 +124,13 @@ button:not(:disabled) {
     height: 100%;
     padding: 0 0 1rem;
     overflow-y: auto;
-    background-color: #121212;
+    background-color: rgb(0, 0, 0);
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
     flex-direction: column;
     transform: translateX(-100%);
     transition: 250ms ease;
 }
+
 #wrapper {
     overflow-x: hidden;
 }
@@ -189,4 +212,57 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .city_map {
     width: 400px;
     height: 250px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 7%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
